@@ -28,7 +28,8 @@ Eureka Server为微服务注册中心
 
 ## 工程案例
 
-
+* [服务消费者（rest+ribbon）](consumer-ribbon/README.md)
+	* ribbon是一个负载均衡客户端，可以很好的控制http和tcp。示例包含一个注册中心，两个服务提供者，一个消费者
 * [网关gateway](gateway/README.md)
 	* 包含注册中心、若干服务提供方、网关消费方
 * [config](config/README.md)
