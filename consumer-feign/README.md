@@ -1,9 +1,6 @@
-## 服务消费者（ribbon+rest）
+## 服务消费者（Feign）
 
 ---
-
-Spring cloud有两种服务调用方式，一种是ribbon+restTemplate，另一种是feign
-
 
 ### 启动注册中心 eureka-server
 
@@ -66,30 +63,27 @@ eureka.instance.lease-expiration-duration-in-seconds=5
 
 ```
 
-![image](img/1.png)
 
-http://localhost:8021/hello?name=Tom，访问该地址，刷新两次
+http://localhost:8021/hello?name=Tom哥，访问该地址，刷新两次
 
 ```
 第一次返回：
-hello，Tom,host:192.168.0.3,service_id:provider-service,port:8010
+hello，Tom哥,host:192.168.0.3,service_id:provider-service,port:8010
 
 第二次返回：
-hello，Tom,host:192.168.0.3,service_id:provider-service,port:8011
+hello，Tom哥,host:192.168.0.3,service_id:provider-service,port:8011
 ```
 
 
-RestTemplate几种常见的请求方式:
+http://localhost:8021/validatPerson?name=Tom哥
 
-https://blog.csdn.net/u012702547/article/details/77917939
+```
+{"name":"Tom哥","result":"名字name匹配"}
+```
 
+http://localhost:8021/validatPerson?name=Tom
 
-
-
-
-
-
-
-
-
+```
+{"name":"Tom","result":"名字name不匹配"}
+```
 
