@@ -33,6 +33,11 @@ java -jar eureka-server-1.0.0.jar --spring.profiles.active=3  >/dev/null &
 ![image](img/1.png)
 
 
+ps：当然也可以不使用hostname方式，通过配置 eureka.instance.preferIpAddress=true，采用IP形式注册，前提，多个实例要部署在不同的机器上。
+
+http://projects.spring.io/spring-cloud/spring-cloud.html#_high_availability_zones_and_regions
+
+
 ### compute-service 服务提供方 
 
 http://blog.didispace.com/springcloud1/
