@@ -66,3 +66,19 @@ b）http://localhost:5555/person/get_user_info?name=Tom
 
 路由到person-service工程的get_user_info?name=Tom
 ```
+
+
+### 服务过滤
+
+zuul不仅只是路由，并且还能过滤，做一些安全验证。
+
+com.filter.AccessFilter
+
+* 日志记录
+* 登录校验
+* 权限校验
+* 流控
+
+https://blog.csdn.net/forezp/article/details/69939114
+
+
